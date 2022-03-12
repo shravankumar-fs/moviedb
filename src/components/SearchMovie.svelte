@@ -6,16 +6,19 @@
 	function submitSearch() {
 		goto('/search/' + search);
 	}
+	let active = false;
+	$: {
+		active = search != '';
+	}
 </script>
 
 <form class="search" on:submit|preventDefault={submitSearch}>
-	<input
-		class={search != '' ? 'selected' : ''}
-		name="search_movie"
-		type="text"
-		bind:value={search}
-	/>
-	<label for="search_movie">Search Movie</label>
+	<input class={active ? 'selected' : ''} name="search_movie" type="text" bind:value={search} />
+	{#if !active}
+		<label for="search_movie" out:fly={{ y: -30, duration: 500 }} in:fly={{ y: 30, duration: 500 }}
+			>Search Movie</label
+		>
+	{/if}
 	{#if search}
 		<button out:fly={{ x: 0, duration: 500 }} in:fly={{ x: 30, duration: 500 }}>Search</button>
 	{/if}
@@ -24,8 +27,8 @@
 <style>
 	.search {
 		position: relative;
-		width: 30%;
-		margin: 1rem;
+		width: 40%;
+		margin: 1rem 0;
 		overflow-x: hidden;
 	}
 	button {
@@ -69,11 +72,14 @@
 		padding: 0rem 1rem;
 		transition: 0.8s ease-in-out;
 	}
-	input:focus ~ label {
-		top: -20%;
-		color: rgb(63, 63, 63);
-	}
+
 	input.selected {
 		background-color: rgb(40, 40, 40);
+	}
+
+	@media only screen and (max-width: 600px) {
+		.search {
+			width: 100%;
+		}
 	}
 </style>
