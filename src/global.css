@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 * {
-	font-family: 'Kanit', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	color: lightseagreen;
+	letter-spacing: 1px;
 }
 body {
 	margin: 0 10%;
+	background: linear-gradient(135deg, hsla(200, 100%, 10%, 0.9) 50%, hsla(200, 100%, 5%, 0.9));
 }

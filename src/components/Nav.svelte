@@ -10,10 +10,10 @@
 		justify-content: center;
 	}
 	a {
-		font-size: 1rem;
-		font-weight: bold;
-		font-family: 'Kanit';
-		color: black;
+		font-size: 2rem;
+		font-weight: 500;
+		font-family: 'Montserrat';
+		/* color: black; */
 		text-decoration: none;
 	}
 </style>

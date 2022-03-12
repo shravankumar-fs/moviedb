@@ -6,5 +6,9 @@
 <svelte:head>
 	<title>Movie DB</title>
 </svelte:head>
+
 <Nav />
 <slot />
+
+<style>
+</style>

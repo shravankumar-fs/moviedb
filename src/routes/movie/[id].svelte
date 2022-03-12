@@ -45,6 +45,8 @@
 <style>
 	h1 {
 		padding: 1 rem 0rem 2rem;
+		text-align: center;
+		color: aliceblue;
 	}
 	p {
 		padding: 1rem 0rem;
@@ -57,7 +59,14 @@
 		border-radius: 1rem;
 	}
 	.movie-details {
-		margin: 2rem 20%;
+		height: 100%;
+		width: 80%;
+		margin: 2rem auto;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 6px 6px 8px 1px rgba(0, 0, 0, 0.3), -4px -4px 8px 1px rgba(255, 255, 255, 0.05),
+			inset -1px -1px 6px 1px rgba(255, 255, 255, 0.1), inset 1px 1px 6px 1px rgba(0, 0, 0, 0.1);
+		background: linear-gradient(-135deg, hsla(200, 100%, 10%, 0.9) 50%, hsla(200, 100%, 5%, 0.9));
 	}
 	span {
 		font-weight: bold;

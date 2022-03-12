@@ -48,13 +48,13 @@
 		width: 100%;
 		border: none;
 		font-size: 1rem;
-		font-family: 'Kanit', sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		outline: none;
-		color: rgb(255, 255, 255);
+		color: lightseagreen;
 		padding: 0.5rem 0.1rem;
 		transition: background 0.75s ease-out;
 		font-weight: bold;
-		background: rgb(63, 63, 63);
+		background: linear-gradient(135deg, hsla(200, 100%, 10%, 0.9) 50%, hsla(200, 100%, 5%, 0.9));
 		border-radius: 10px;
 		padding: 1rem;
 	}
@@ -65,9 +65,9 @@
 		left: 0;
 		transform: translate(0, -50%);
 		pointer-events: none;
-		color: #fff;
+		color: lightseagreen;
 		padding: 0rem 1rem;
-		transition: 0.3s ease-in-out;
+		transition: 0.8s ease-in-out;
 	}
 	input:focus ~ label {
 		top: -20%;

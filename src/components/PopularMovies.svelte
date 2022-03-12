@@ -3,7 +3,7 @@
 	export let popular;
 </script>
 
-<h3>Popular Movies</h3>
+<h3>Populars</h3>
 <div class="popular-movies">
 	{#each popular as movie}
 		<MovieCard {movie} />
@@ -12,7 +12,7 @@
 
 <style>
 	h3 {
-		padding: 0 1rem;
+		padding: 1rem 1rem;
 	}
 	.popular-movies {
 		display: grid;
