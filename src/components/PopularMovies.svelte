@@ -1,6 +1,5 @@
 <script lang="ts">
 	import MovieCard from './MovieCard.svelte';
-
 	export let popular;
 </script>
 

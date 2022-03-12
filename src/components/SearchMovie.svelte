@@ -1,6 +1,7 @@
 <script lang="ts">
 	let search = '';
 	import { goto } from '$app/navigation';
+	import { fly } from 'svelte/transition';
 
 	function submitSearch() {
 		goto('/search/' + search);
@@ -16,7 +17,7 @@
 	/>
 	<label for="search_movie">Search Movie</label>
 	{#if search}
-		<button>Search</button>
+		<button out:fly={{ x: 0, duration: 500 }} in:fly={{ x: 30, duration: 500 }}>Search</button>
 	{/if}
 </form>
 
@@ -25,6 +26,7 @@
 		position: relative;
 		width: 30%;
 		margin: 1rem;
+		overflow-x: hidden;
 	}
 	button {
 		font-size: 0.7rem;

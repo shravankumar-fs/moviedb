@@ -15,12 +15,13 @@
 </script>
 
 <script lang="ts">
+	import { fly } from 'svelte/transition';
 	import PopularMovies from '../components/PopularMovies.svelte';
 	import SearchMovie from '../components/SearchMovie.svelte';
 	export let popular;
 </script>
 
-<section>
+<section in:fly={{ x: 100, duration: 500 }} out:fly={{ x: -100, duration: 500, delay: 500 }}>
 	<SearchMovie />
 	<PopularMovies {popular} />
 </section>
