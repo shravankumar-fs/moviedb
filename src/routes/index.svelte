@@ -17,6 +17,7 @@
 </script>
 
 <script lang="ts">
+	import global from '../global.css';
 	import PopularMovies from '../components/PopularMovies.svelte';
 	export let popular;
 </script>
