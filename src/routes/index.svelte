@@ -1,6 +1,4 @@
 <script lang="ts" context="module">
-	import { onMount } from 'svelte';
-
 	export async function load({ fetch }) {
 		const res = await fetch(
 			'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=23c428e5e6e883031294f63d0e90e3ce&page=1'
@@ -18,9 +16,11 @@
 
 <script lang="ts">
 	import PopularMovies from '../components/PopularMovies.svelte';
+	import SearchMovie from '../components/SearchMovie.svelte';
 	export let popular;
 </script>
 
 <section>
+	<SearchMovie />
 	<PopularMovies {popular} />
 </section>
